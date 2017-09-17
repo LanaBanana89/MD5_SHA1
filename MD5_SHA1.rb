@@ -1,3 +1,5 @@
+#программа, шифрующая слова и фразы с помощью MD5 и SHA-1
+
 if (Gem.win_platform?)
   Encoding.default_external = Encoding.find(Encoding.locale_charmap)
   Encoding.default_internal = __ENCODING__
@@ -32,3 +34,4 @@ puts "Каким способом зашифровать: \n1.MD5\n2.SHA1"
 
   end
     puts "Вот что получилось: " + cipher
+
