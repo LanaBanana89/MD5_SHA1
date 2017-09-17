@@ -13,22 +13,24 @@ puts "Введите слово или фразу для шифрования"
 
   word = STDIN.gets.encode("UTF-8").chomp
 
-puts "Каким способом зашифровать: \n1.MD5\n2.SHA1"
+puts "Каким способом зашифровать: \n1.MD5\n2.SHA1\n3.SHA2"
 
   num = STDIN.gets.to_i
 
-  while num != 1 && num != 2
-    puts "Выберите 1 или 2"
+  while num != 1 && num != 2 && num != 3
+    puts "Выберите 1, 2 или 3"
     num = STDIN.gets.chomp.to_i
   end
 
-  if (num == 1)
-
+  case num
+    when 1
     cipher = Digest::MD5.hexdigest(word)
 
-  elsif (num == 2)
-
+    when 2
     cipher = Digest::SHA1.hexdigest(word)
+
+    when 3
+    cipher = Digest::SHA2.hexdigest(word)
 
   end
     puts "Вот что получилось: " + cipher
