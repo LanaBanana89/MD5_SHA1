@@ -23,12 +23,6 @@ puts "Каким способом зашифровать: \n1.MD5\n2.SHA1\n3.SHA
   until([1,2,3].include?(num)) do
     puts "\nКаким способом зашифровать:\n1. MD5\n2. SHA1\n3. SHA2"
 
-  while num != 1 && num != 2 && num != 3
-    puts "Выберите 1, 2 или 3"
-
-    num = STDIN.gets.chomp.to_i
-  end
-
   case num
     when 1
     cipher = Digest::MD5.hexdigest(word)
