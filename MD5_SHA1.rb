@@ -20,6 +20,7 @@ num = STDIN.gets.to_i
 
 until([1,2,3].include?(num)) do
   puts "\nКаким способом зашифровать:\n1. MD5\n2. SHA1\n3. SHA2"
+  num = STDIN.gets.to_i
 end
 
 case num
